@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad_6._1
+{
+    class Prostok¹t
+    {
+        private double dlugosc;
+        private double szerokosc;
+
+        public Prostok¹t(double dl, double szer)
+        {
+            dlugosc = dl;
+            szerokosc = szer;
+        }
+
+        private double Powierzchnia(double dl, double szer)
+        {
+            return dlugosc * szerokosc;
+        }
+
+        private double Obwod(double dl, double szer)
+        {
+            return (dlugosc * 2) + (szerokosc * 2);
+        }
+
+
+        public void Prezentuj()
+        {
+            Console.WriteLine("Powierzchnia prostok¹ta wynosi {0} cm kwadr.", Powierzchnia(dlugosc, szerokosc));
+            Console.WriteLine("Obwód prostok¹ta wynosi {0} cm.", Obwod(dlugosc, szerokosc));
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Dla prostok¹ta o bokach 4 i 3 cm.");
+            Prostok¹t pow = new Prostok¹t(4, 3);
+            pow.Prezentuj();
+            Console.ReadKey();
+        }
+    }
+}
